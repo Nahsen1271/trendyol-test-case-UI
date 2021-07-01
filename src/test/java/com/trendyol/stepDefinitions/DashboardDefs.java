@@ -63,7 +63,7 @@ public class DashboardDefs {
                 int totalImage = dashboardPage.boutiqueImages.size();
                 System.out.println(category + " = " + totalImage);     // print out the category name and total images
 
-                jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.upToPage); // Scroll up the page
+                jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.upToPage); // Scroll up the page to able to click tags.
 
                 BrowserUtils.waitFor(2);
             }
@@ -86,7 +86,7 @@ public class DashboardDefs {
         System.out.println("Category First Text :" + Category[0]);
         Assert.assertTrue(title.contains(Category[0]));
 
-        jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page
+        jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page to get all images
         BrowserUtils.waitFor(1);
        dashboardPage.selectRandomBoutique();
     }
@@ -94,7 +94,7 @@ public class DashboardDefs {
     @When("Verify that the product images are displayed")
     public void verify_that_the_product_images_are_displayed() {
 
-            jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page
+            jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page to get all images
             BrowserUtils.waitFor(1);
             int productListSize= boutiquePage.productList.size();
         System.out.println("productListSize = " + productListSize);
