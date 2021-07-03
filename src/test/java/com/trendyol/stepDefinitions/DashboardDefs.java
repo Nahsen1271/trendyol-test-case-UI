@@ -41,7 +41,7 @@ public class DashboardDefs {
     @Then("User should be able to click Tabs and all the images should be displayed")
     public void user_should_be_able_to_click_Tabs_and_all_the_images_should_be_displayed() {
         try {
-            for (int i = 0; i < dashboardPage.tabs.size(); i++) {  // click on TABS one by one
+            for (int i = 0; i < dashboardPage.tabs.size(); i++) {  //click on TABS one by one
                 dashboardPage.tabs.get(i).click();
                 BrowserUtils.waitFor(5);
 
@@ -53,7 +53,7 @@ public class DashboardDefs {
                 Assert.assertTrue(title.contains(Category[0]));
 
 
-                jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page
+                jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); //Scroll down the page
                 BrowserUtils.waitFor(1);
 
                 for (int j = 0; j < dashboardPage.boutiqueImages.size(); j++) {    // to  check if all the images displayed or not.
