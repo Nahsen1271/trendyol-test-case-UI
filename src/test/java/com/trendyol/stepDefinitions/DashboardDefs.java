@@ -41,7 +41,7 @@ public class DashboardDefs {
     @Then("User should be able to click Tabs and all the images should be displayed")
     public void user_should_be_able_to_click_Tabs_and_all_the_images_should_be_displayed() {
         try {
-            for (int i = 0; i < dashboardPage.tabs.size(); i++) {  //click on TABS one by one
+            for (int i = 0; i < dashboardPage.tabs.size(); i++) { //click on TABS one by one to see on the web page
                 dashboardPage.tabs.get(i).click();
                 BrowserUtils.waitFor(5);
 
