@@ -56,7 +56,7 @@ public class DashboardDefs {
                 jse.executeScript("arguments[0].scrollIntoView(true);", dashboardPage.downToPage); // Scroll down the page
                 BrowserUtils.waitFor(1);
 
-                for (int j = 0; j < dashboardPage.boutiqueImages.size(); j++) {    // to check if all the images displayed or not.
+                for (int j = 0; j < dashboardPage.boutiqueImages.size(); j++) {    // to  check if all the images displayed or not.
                     Assert.assertTrue(dashboardPage.boutiqueImages.get(j).isDisplayed());
 
                 }
